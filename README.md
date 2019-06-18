@@ -1,5 +1,5 @@
 ###   mysql 和hive Top n查询
-##测试数据
+## 测试数据
 
 ```mysql
 #假设下面是商品的流水单，商品的id和售卖的季节，要求出各个商品 在哪个季节是卖的最多的
@@ -70,9 +70,9 @@ select * from product2;
 ```
 
 
-##分组选topN
+## 分组选topN
 
-###mysql
+### mysql
 要选top1,只要同组(id相等),只要比他大的数目是0就行,如果要top2,就比他大的数目<2,就是0个和1个
 
 ```mysql
@@ -92,7 +92,7 @@ mysql> select * from product2 pro where ( select count(1) from product2 where id
 2 rows in set (0.00 sec)
 ```
 
-###hive
+### hive
 
 hive中可以只用row_number 开窗就行
 
